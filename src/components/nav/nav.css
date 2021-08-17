@@ -11,8 +11,8 @@
     transition: all 0.5s;
 }
 
-
 .nav__contents {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
