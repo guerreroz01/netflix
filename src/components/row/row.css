@@ -7,8 +7,10 @@
     display: flex;
     overflow-y: hidden;
     overflow-x: scroll;
+    scroll-behavior: smooth;
     padding: 20px;
     scrollbar-width: none;
+    cursor: pointer;
 }
 
 .row__poster {

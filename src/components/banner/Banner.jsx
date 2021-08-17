@@ -27,7 +27,7 @@ export default function Banner() {
     return string?.length > n ? string.substr(0, n - 1) + "..." : string;
   };
 
-  return (
+  return ( 
     <header
       className="banner"
       style={{
@@ -51,7 +51,7 @@ export default function Banner() {
       </div>
       <div className="banner__fadeBottom"></div>
     </header>
-    
+     
   );
 }
 

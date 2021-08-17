@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "../../axios";
 import { v4 as uuid } from "uuid";
+import ScrollContainer from 'react-indiana-drag-scroll'
 import "./row.css";
 
 function Row({ title, fetchUrl, isLargeRow = false }) {
@@ -16,25 +17,24 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
 
     fetchData();
   }, [fetchUrl]);
-  console.log(isLargeRow);
+
   return (
     <div className="row" key={uuid}>
       <h2>{title}</h2>
-      <div className="row__posters" key={uuid()}>
+          <ScrollContainer className="row__posters" key={uuid()} horizontal={true} nativeMobileScroll={true}>
         {movies.map(
           (movie) =>
-            ((isLargeRow && movie.poster_path) || (!isLargeRow && movie.backdrop_path)) && (
+            ((isLargeRow && movie.poster_path) ||
+              (!isLargeRow && movie.backdrop_path)) && (
               <img
                 key={uuid()}
                 className={`row__poster ${isLargeRow && "row__posterLarge"}`}
-                src={`${baseUrl}${
-                  movie.poster_path
-                }`}
+                src={`${baseUrl}${movie.poster_path}`}
                 alt={movie.name}
               />
             )
         )}
-      </div>
+      </ScrollContainer>
     </div>
   );
 }
