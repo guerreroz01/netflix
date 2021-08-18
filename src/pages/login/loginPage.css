@@ -1,0 +1,116 @@
+.loginPage {
+  position: relative;
+  height: 100%;
+}
+
+.loginPage__logo {
+  position: fixed;
+  left: 0;
+  width: 150px;
+  object-fit: contain;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.loginPage__signIn_button {
+  border: none;
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #e50914;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.loginPage__gradient {
+  width: 100%;
+  z-index: 100;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+}
+
+.loginPage__body {
+  position: absolute;
+  top: 30%;
+  z-index: 100;
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.loginPage__body > h1 {
+  font-size: 3.125rem;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.loginPage__body > h2 {
+  padding: 0 20px;
+  margin-bottom: 20px;
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
+.loginPage__body > h3 {
+  padding: 0 20px;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+.loginPage__input {
+  margin: 20px;
+}
+.loginPage__input > form > input {
+  padding: 20px;
+  outline: none;
+  font-size: 1.4rem;
+  border: 0.5px solid #333;
+  width: 30%;
+  max-width: 600px;
+}
+
+.loginPage__getStarted {
+  padding: 20px;
+  border: 0.5px solid #333;
+  color: white;
+  background-color: #e50914;
+  font-weight: 600;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .loginPage__body {
+    top: 40%;
+  }
+  .loginPage__body > h1 {
+    font-size: 1.8rem;
+  }
+  .loginPage__body > h2 {
+    display: none;
+  }
+  .loginPage__body > h3 {
+    font-size: 0.8rem;
+  }
+  .loginPage__input > form > input {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .loginPage__getStarted {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
