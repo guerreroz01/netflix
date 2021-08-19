@@ -46,7 +46,8 @@
   color: white;
   margin: 0 auto;
   text-align: center;
-  width: 100%;
+  left: 0;
+  right: 0;
 }
 
 .loginPage__body > h1 {
@@ -71,14 +72,24 @@
 
 .loginPage__input {
   margin: 20px;
+  display: flex;
+  justify-content: center;
 }
+
+.loginPage__input > form {
+  display: flex;
+  width: 100%;
+  max-width: 760px;
+  justify-content: center;
+  align-items: center;
+}
+
 .loginPage__input > form > input {
   padding: 20px;
   outline: none;
   font-size: 1.4rem;
   border: 0.5px solid #333;
-  width: 30%;
-  max-width: 600px;
+  width: 40%;
 }
 
 .loginPage__getStarted {
@@ -90,11 +101,10 @@
   font-size: 1.4rem;
   cursor: pointer;
 }
-
+.signIn__mobile {
+  top: 20%;
+}
 @media (max-width: 760px) {
-  .loginPage__body {
-    top: 40%;
-  }
   .loginPage__body > h1 {
     font-size: 1.8rem;
   }
@@ -107,6 +117,11 @@
   .loginPage__input > form > input {
     font-size: 1rem;
     padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .loginPage__input > form {
+    flex-direction: column;
   }
 
   .loginPage__getStarted {

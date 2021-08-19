@@ -31,7 +31,7 @@ function LoginPage({ setUser }) {
           )}
           <div className="loginPage__gradient"></div>
         </div>
-        <div className="loginPage__body">
+        <div className={"loginPage__body " + ` ${signIn && "signIn__mobile"} `}>
           {signIn ? (
             <SignUp />
           ) : (
@@ -45,10 +45,7 @@ function LoginPage({ setUser }) {
               <div className="loginPage__input">
                 <form>
                   <input type="email" placeholder="Correo electrónico" />
-                  <button
-                    className="loginPage__getStarted"
-                    onClick={() => setUser(true)}
-                  >
+                  <button className="loginPage__getStarted" onClick={() => {}}>
                     Comenzar &gt;
                   </button>
                 </form>
