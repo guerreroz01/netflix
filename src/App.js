@@ -1,37 +1,50 @@
-import "./App.css";
-import HomePage from "./pages/home/HomePage";
+import { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import LoginPage from "./pages/login/LoginPage";
-import { useState, useEffect } from "react";
 import { auth } from "./firebaseConfig";
+import { useDispatch, useSelector } from "react-redux";
+import { logout, login, selectUser } from "./features/userSlice";
+
+import "./App.css";
+import LoginPage from "./pages/login/LoginPage";
+import ProfilePage from "./pages/profile/ProfilePage";
+import HomePage from "./pages/home/HomePage";
 
 function App() {
-  const [user, setUser] = useState(null);
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const unsusbscribe = auth.onAuthStateChanged((userAuth) => {
       if (userAuth) {
         //logged in
-        setUser(userAuth);
+        dispatch(
+          login({
+            uid: userAuth.uid,
+            email: userAuth.email,
+          })
+        );
       } else {
         //logged out
+        dispatch(logout());
       }
     });
 
     return unsusbscribe;
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="app">
       <Router>
         {!user ? (
-          <LoginPage setUser={setUser} />
+          <LoginPage />
         ) : (
           <Switch>
             <Route path="/" exact>
               <HomePage />
             </Route>
-            <Route path="/test"></Route>
+            <Route path="/profile">
+              <ProfilePage />
+            </Route>
           </Switch>
         )}
       </Router>

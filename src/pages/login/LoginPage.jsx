@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import SignUp from "../../components/signUp/SignUp";
 import "./loginPage.css";
 
-function LoginPage({ setUser }) {
+function LoginPage() {
   const [signIn, setSignIn] = useState(false);
   return (
     <>
@@ -31,7 +31,7 @@ function LoginPage({ setUser }) {
           )}
           <div className="loginPage__gradient"></div>
         </div>
-        <div className={"loginPage__body " + ` ${signIn && "signIn__mobile"} `}>
+        <div className={`loginPage__body ${signIn && " signIn__mobile"} `}>
           {signIn ? (
             <SignUp />
           ) : (

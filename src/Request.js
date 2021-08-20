@@ -1,4 +1,4 @@
-const API_KEY = "19320b317cc7917331b879e04fb619a5";
+const API_KEY = `${process.env.REACT_APP_REQUEST_KEY}`;
 
 const request = {
   fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
@@ -12,5 +12,3 @@ const request = {
 };
 
 export default request;
-
-/*"https://api.themoviedb.org/3/trending/all/week?api_key=19320b317cc7917331b879e04fb619a5&language=en-US"*/
