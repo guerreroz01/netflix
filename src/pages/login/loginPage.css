@@ -286,6 +286,7 @@
   .loginPage__tv {
     flex-direction: column;
     text-align: center;
+    height: 600px;
   }
   .loginPage__tv__left {
     align-items: center;
@@ -301,11 +302,12 @@
 
   .loginPage__tv__right {
     flex-shrink: 1;
-    padding-top: 42px;
+    padding-top: 0px;
   }
 
   .loginPage__phone {
     flex-direction: column-reverse;
+    height: 600px;
   }
   .loginPage__phone__left {
     margin: 0;
