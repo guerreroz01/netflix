@@ -54,6 +54,48 @@ function LoginPage() {
           )}
         </div>
       </div>
+      <div className="loginPage__tv">
+        <div className="loginPage__tv__left">
+          <h2>Enjoy on your TV.</h2>
+          <p>
+            Whatch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV,
+            Blu-ray players, and more
+          </p>
+        </div>
+        <div className="loginPage__tv__right">
+          <img src={process.env.PUBLIC_URL + "/tv.png"} alt="" />
+          <video
+            className="loginPage__tv__video"
+            autoPlay
+            playsInline
+            muted
+            loop
+          >
+            <source
+              src={process.env.PUBLIC_URL + "/video-tv-0819.m4v"}
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </div>
+      <div className="loginPage__phone">
+        <div className="loginPage__phone__left">
+          <img src={process.env.PUBLIC_URL + "/mobile-0819.jpg"} alt="" />
+          <div className="loginPage__phone__leftContainer">
+            <div className="loginPage__phone__leftImage">
+              <img src={process.env.PUBLIC_URL + "/boxshot.png"} alt="" />
+            </div>
+            <div className="loginPage__phone__leftD">
+              <h4>Stranger Things</h4>
+              <p>Downloading...</p>
+            </div>
+          </div>
+        </div>
+        <div className="loginPage__phone__right">
+          <h2>Download your shows to watch offline.</h2>
+          <p>Save your favorites easily and always have something to watch</p>
+        </div>
+      </div>
     </>
   );
 }

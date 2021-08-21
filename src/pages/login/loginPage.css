@@ -1,20 +1,22 @@
 .loginPage {
+  background: #000;
   position: relative;
   height: 100%;
 }
 
 .loginPage__logo {
-  position: fixed;
+  position: absolute;
   left: 0;
   width: 150px;
   object-fit: contain;
   padding-left: 20px;
   cursor: pointer;
+  z-index: 200;
 }
 
 .loginPage__signIn_button {
   border: none;
-  position: fixed;
+  position: absolute;
   top: 30px;
   right: 20px;
   font-size: 1rem;
@@ -29,7 +31,7 @@
 .loginPage__gradient {
   width: 100%;
   z-index: 100;
-  height: 100vh;
+  height: 80vh;
   background: rgba(0, 0, 0, 0.4);
   background-image: linear-gradient(
     to top,
@@ -104,7 +106,158 @@
 .signIn__mobile {
   top: 20%;
 }
-@media (max-width: 760px) {
+
+.loginPage__tv {
+  height: 500px;
+  background: #000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+  border-top: 5px solid #222;
+  border-bottom: 5px solid #222;
+}
+
+.loginPage__tv__left {
+  max-width: 600px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-left: 20px;
+}
+.loginPage__tv__left > h2 {
+  font-size: 3rem;
+  padding: 20px 0;
+}
+
+.loginPage__tv__left > p {
+  font-size: 1.6rem;
+}
+
+.loginPage__tv__right {
+  position: relative;
+  min-width: 360px;
+  max-width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 320px;
+  z-index: 100;
+  flex-shrink: 0;
+}
+
+.loginPage__tv__right > img {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  object-fit: contain;
+  z-index: 120;
+}
+
+.loginPage__tv__video {
+  max-width: 300px;
+  height: 100%;
+  width: 100%;
+}
+
+.loginPage__phone {
+  display: flex;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginPage__phone__left {
+  position: relative;
+  max-width: 450px;
+  min-width: 360px;
+  margin-right: 40px;
+}
+
+.loginPage__phone__left > img {
+  width: 100%;
+}
+
+.loginPage__phone__leftContainer {
+  display: flex;
+  border: 2px solid #222;
+  border-radius: 30px;
+  height: 90px;
+  width: 300px;
+  color: white;
+  position: absolute;
+  background: #000;
+  top: 65%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.loginPage__phone__leftImage {
+  width: 100px;
+  text-align: center;
+  padding: 5px;
+}
+
+.loginPage__phone__leftImage > img {
+  height: 100%;
+}
+
+.loginPage__phone__leftD {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loginPage__phone__leftContainer::after {
+  width: 3em;
+  height: 3em;
+  outline: 2px solid #000;
+  outline-offset: -2px;
+  display: block;
+  background: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif)
+    center center no-repeat;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+  content: "";
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+.loginPage__phone__leftContainer > div > h4 {
+  font-weight: 800;
+}
+
+.loginPage__phone__leftContainer > div > p {
+  color: #0761ca;
+}
+
+.loginPage__phone__right {
+  max-width: 600px;
+  color: white;
+}
+
+.loginPage__phone__right > h2 {
+  font-size: 3rem;
+  padding: 20px 0;
+}
+
+.loginPage__phone__right > p {
+  font-size: 1.6rem;
+}
+
+@media (max-width: 820px) {
   .loginPage__body > h1 {
     font-size: 1.8rem;
   }
@@ -128,5 +281,46 @@
   .loginPage__getStarted {
     font-size: 1rem;
     padding: 10px;
+  }
+
+  .loginPage__tv {
+    flex-direction: column;
+    text-align: center;
+  }
+  .loginPage__tv__left {
+    align-items: center;
+  }
+  .loginPage__tv__left > h2 {
+    font-size: 2.2rem;
+  }
+
+  .loginPage__tv__left > p {
+    font-size: 1.3rem;
+    padding-right: 20px;
+  }
+
+  .loginPage__tv__right {
+    flex-shrink: 1;
+    padding-top: 42px;
+  }
+
+  .loginPage__phone {
+    flex-direction: column-reverse;
+  }
+  .loginPage__phone__left {
+    margin: 0;
+  }
+
+  .loginPage__phone__right {
+    padding: 20px 40px;
+    text-align: center;
+  }
+
+  .loginPage__phone__right > h2 {
+    font-size: 2.1rem;
+  }
+
+  .loginPage__phone__right > p {
+    font-size: 1.3rem;
   }
 }
