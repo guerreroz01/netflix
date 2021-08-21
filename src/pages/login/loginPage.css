@@ -152,7 +152,7 @@
 
 .loginPage__tv__right > img {
   position: absolute;
-  top: 20px;
+  top: 30px;
   left: 0;
   width: 100%;
   object-fit: contain;
@@ -160,7 +160,7 @@
 }
 
 .loginPage__tv__video {
-  max-width: 300px;
+  max-width: 260px;
   height: 100%;
   width: 100%;
 }
