@@ -181,6 +181,7 @@
 
 .loginPage__phone__left > img {
   width: 100%;
+  object-fit: contain;
 }
 
 .loginPage__phone__leftContainer {
@@ -202,11 +203,13 @@
 .loginPage__phone__leftImage {
   width: 100px;
   text-align: center;
-  padding: 5px;
+  padding: 5px 0;
 }
 
 .loginPage__phone__leftImage > img {
   height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 .loginPage__phone__leftD {
@@ -214,6 +217,7 @@
   height: 100%;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .loginPage__phone__leftContainer::after {
