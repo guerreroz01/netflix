@@ -170,6 +170,7 @@
   height: 500px;
   justify-content: center;
   align-items: center;
+  border-bottom: 5px solid #222;
 }
 
 .loginPage__phone__left {
@@ -261,6 +262,82 @@
   font-size: 1.6rem;
 }
 
+
+.loginPage__mac {
+  display: flex;
+  height: 600px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 5px solid #222;
+}
+
+.loginPage__mac__left {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    max-width: 600px;
+}
+
+.loginPage__mac__left > h2 {
+    font-size: 3rem;
+    padding: 20px 0;
+}
+
+.loginPage__mac__left > p {
+    font-size: 1.6rem;
+} 
+
+
+.loginPage__mac__right {
+  position: relative;
+  max-width: 450px;
+  min-width: 360px;
+  margin-left: 40px;
+  text-align: center;
+
+}
+
+.loginPage__mac_right__imgContainer {
+    position: absolute;
+    top: 30px;
+}
+
+
+.loginPage__mac__right__imgContainer > img {
+    width: 100%;
+}
+
+.loginPage__mac__right__videoContainer {
+    width: 380px;
+    height: 380px;
+    padding-left:100px;
+}
+
+.loginPage__kids {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #222;
+}
+
+.loginPage__kids__left > img {
+}
+
+.loginPage__kids__right {
+color: white;
+min-width: 360px;
+max-width: 600px;
+}
+
+.loginPage__kids__right > h2 {
+    font-size: 3rem;
+    padding: 20px 0;
+}
+
+.loginPage__kids__right > p {
+    font-size: 1.6rem;
+}
+
 @media (max-width: 820px) {
   .loginPage__body > h1 {
     font-size: 1.8rem;
@@ -328,5 +405,13 @@
 
   .loginPage__phone__right > p {
     font-size: 1.3rem;
+  }
+
+  .loginPage__mac {
+      flex-direction: column;
+  }
+
+  .loginPage__kids {
+      flex-direction: column-reverse;
   }
 }
